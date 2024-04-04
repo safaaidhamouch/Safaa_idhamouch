@@ -1,0 +1,48 @@
+﻿<Window x:Class="Safaa_idhamouch.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Safaa_idhamouch"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Label Content="value 1:"/>
+            <TextBlock x:Name="number1" TextWrapping="Wrap"/>
+            <TextBox x:Name="numberTextBox1" TextWrapping="Wrap" Width="120" IsEnabled="False" />
+            <Slider x:Name="numberaffiche1" Width="120" ValueChanged="numberaffiche1_ValueChanged" Minimum="1" Maximum="500" />
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Content="value 2"/>
+            <Slider x:Name="numberaffiche2" Width="120" ValueChanged="numberaffiche1_ValueChanged" Minimum="1" Maximum="500" />
+            <TextBox x:Name="numberTextBox2" TextWrapping="Wrap" Width="120" TextChanged= "numberTextBox2_TextChanged"/>
+            <TextBlock x:Name="number2" TextWrapping="Wrap"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <Label Content="value 3"/>
+            <TextBlock TextWrapping="Wrap" x:Name="number3" />
+            <TextBox x:Name="numberTextBox3" TextWrapping="Wrap" Width="120"  TextChanged= "numberTextBox3_TextChanged"/>
+            <Slider x:Name="numberaffiche3" Width="120" ValueChanged="numberaffiche1_ValueChanged" Minimum="1"/>
+        </StackPanel>
+        <Button x:Name="update" Grid.Column="1" Content="update" HorizontalAlignment="Left" Margin="83,41,0,0" Grid.Row="1" VerticalAlignment="Top" Click="update_Click"/>
+        <Label Content="Value1" HorizontalAlignment="Left" Margin="75,28,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Label Content="Value2" HorizontalAlignment="Left" Margin="75,54,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Label Content="Value3" HorizontalAlignment="Left" Margin="83,85,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <TextBlock x:Name="value1" Grid.Column="1" HorizontalAlignment="Center" Margin="0,28,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="value2" Grid.Column="1" HorizontalAlignment="Center" Margin="0,64,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FFDECE1B"/>
+        <TextBlock x:Name="value3" Grid.Column="1" HorizontalAlignment="Center" Margin="0,95,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FFE86161"/>
+        <ListBox Grid.Column="2" Grid.Row="2" />
+
+    </Grid>
+</Window>
